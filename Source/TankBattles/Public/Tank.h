@@ -5,6 +5,9 @@
 #include "GameFramework/Pawn.h"
 #include "Tank.generated.h"
 
+//Forward Declarations
+class UTankBarrel;
+
 UCLASS()
 class TANKBATTLES_API ATank : public APawn
 {
@@ -18,13 +21,12 @@ private:
 	ATank();
 
 public:	
-	virtual void Tick(float DeltaTime) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	void AimAt(FVector HitLocation);
 
 	UFUNCTION(BlueprintCallable, Category = Setup)
-	void SetBarrelReference(UStaticMeshComponent* BarrelToSet);
+	void SetBarrelReference(UTankBarrel* BarrelToSet);
 
 	UPROPERTY(EditAnywhere, Category = Firing)
 	float LaunchSpeed = 100000;
