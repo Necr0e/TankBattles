@@ -18,6 +18,16 @@ private:
 	ATank* GetControlledTank() const;
 	void AimAtCrosshairs();
 	bool GetSightRayHitLocation(FVector& OutHitLication) const;
+	bool GetLookDirection(FVector2D ScreenLocation, FVector &LookDirection) const;
+	bool GetHitLocation(FVector LookDirection, FVector &HitLocation) const;
+	
+	UPROPERTY(EditAnywhere)
+	float CrosshairXLocation = 0.5;
+	UPROPERTY(EditAnywhere)
+	float CrosshairYLocation = 0.333;
+	// Line trace range, Default 10km
+	UPROPERTY(EditAnywhere)
+	float LineTraceRange = 1000000.0;
 
 public:
 	virtual void Tick(float DeltaTime) override;
