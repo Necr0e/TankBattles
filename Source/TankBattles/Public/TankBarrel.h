@@ -10,9 +10,9 @@ class TANKBATTLES_API UTankBarrel : public UStaticMeshComponent
 	GENERATED_BODY()
 private:
 	UPROPERTY(EditAnywhere, Category = Setup)
-	float MaxDegreesPerSecond = 30.0f;
+	float MaxDegreesPerSecond = 20.0f;
 	UPROPERTY(EditAnywhere, Category = Setup)
-	float MaxElevationDegrees = 40.0f;
+	float MaxElevationDegrees = 35.0f;
 	UPROPERTY(EditAnywhere, Category = Setup)
 	float MinElevationDegrees = 0.0f;
 

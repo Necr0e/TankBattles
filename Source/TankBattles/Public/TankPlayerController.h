@@ -2,9 +2,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
-#include "Tank.h"
 #include "TankPlayerController.generated.h"
 
+//Forward Delcarations
+class ATank;
 
 UCLASS()
 class TANKBATTLES_API ATankPlayerController : public APlayerController
